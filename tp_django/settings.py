@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mvt_familiares',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,8 @@ ROOT_URLCONF = 'tp_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/home/20284617283@samba.afip.gob.ar/PycharmProjects/tp_django/tp_django/tp_django/templates/',
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
