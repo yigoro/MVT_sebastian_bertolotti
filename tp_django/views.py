@@ -2,15 +2,6 @@ from django.http import HttpResponse
 from django.template import loader, Template, Context
 from mvt_familiares.models import Familiar
 
-def template_using_loader(self, name: str ='name', last_name: str = 'last_name'):
-    template = loader.get_template('template_loader.html')
-
-    context_dict = {'name': name,
-                    'last_name': last_name
-                    }
-    render = template.render(context_dict)
-    return HttpResponse(render)
-
 def nuevo_familiar(self,
                         nombre: str ='mariano',
                         apellido: str = 'bertolotti',
@@ -26,7 +17,7 @@ def nuevo_familiar(self,
                         fecha_nacimiento=fecha_nacimiento,
                         dni=dni)
 
-    familiar.save() #Esto guarda en la base de datos
+    familiar.save() #Este comando graba en la DDBB
 
     context_dict = {'familiar': familiar}
 
