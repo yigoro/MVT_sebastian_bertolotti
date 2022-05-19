@@ -8,10 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Datos ingresados</h1>
-    <h3>Nombre ingresado {{familiar.nombre}}</h3>
-    <h3>Apellido ingresado {{familiar.apellido}}</h3>
-    <h3>Parentezco ingresado {{familiar.parentezco}}</h3>
-    <h3>DNI {{familiar.dni}}</h3>
+    <h2>Listado de familiares ingresados a la fecha {{fecha}}</h2>
+
+    {% for f in familiares %}
+        <l1>Nombre: {{f.nombre}} - Apellido: {{f.apellido}} - Parentezco: {{f.parentezco}} - DNI {{f.dni}}</l1>
+        <br></br>
+    {% endfor %}
+
 </body>
 </html>
